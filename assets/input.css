@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-xs: 600px;
+}
+
+.container {
+    @apply mx-auto px-4 md:w-[1290px];
+}
+
+.bg-color {
+    @apply bg-[#1B99D4];
+}
+
+.body-text {
+    @apply text-neutral-900 opacity-70;
+}
+
+.heading-color {
+    @apply text-[#252525];
+}
+
+.body-bg {
+    @apply bg-[#FEFEFE];
+}
+
+.box-shadow {
+    @apply shadow-[0.914px_4.57px_45.7px_0px_rgba(84,99,122,0.10)];
+}
+
+.before {
+    @apply before:absolute before:top-[31%] sm:before:top-[41%] before:-left-2 before:content-[''] before:h-4 before:w-4 before:rounded-full before:bg-white before:border-r before:border-[#D9D9D9] before:transform before:-translate-y-1/2 before:z-10;
+} 
+
+.after {
+    @apply after:absolute after:top-[31%] sm:after:top-[41%] after:-right-2 after:content-[''] after:h-4 after:w-4 after:rounded-full after:bg-white after:border-l after:border-[#D9D9D9] after:transform after:-translate-y-1/2 after:z-10;
+}
+
+.menu-hover {
+    @apply hover:text-[#1B99D4] duration-300;
+}
+
+.btn-hover {
+    @apply hover:bg-[#0963BD] duration-300;
+}
+
+.footer-hover {
+    @apply relative after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full;
+}
+
+.mobile-menu {
+    @apply fixed top-0 -right-96 transition-all duration-500;
+}
+
+.mobile-menu.open {
+    @apply right-0;
+}
+
+.rotate {
+    @apply transform rotate-180 transition-all duration-300;
+}
+
+.overlay {
+    @apply fixed inset-0 bg-black/50 backdrop-blur-[2px] z-40 hidden;
+}
+
+.overlay.active {
+    @apply block;
+}
